@@ -52,8 +52,6 @@ $(".rooms-count").change(function(){
 				num++;
 	} 
 	
-	
-	
 });	
 	
 
