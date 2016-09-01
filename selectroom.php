@@ -18,7 +18,7 @@
  ?>	
 
 <div class="booking-img">
-<img src="images/booking/booking.jpg">
+<img src="images/covers/booking.jpg">
 <h1 class="center">Booking</h1>	
 </div>
 

@@ -14,7 +14,7 @@
     <div class="col-md-3">        
         Check In
         <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="check_in" data-link-format="yyyy-mm-dd">
-                    <input class="form-control"  name="start" size="16" type="text" value="" readonly>                    
+                    <input class="form-control"  name="start" size="16" type="text" value="" required="">                    
 					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
          </div>
     </div>
@@ -22,14 +22,14 @@
     <div class="col-md-3">
         Check Out
         <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="check_out" data-link-format="yyyy-mm-dd">
-                    <input class="form-control"  name="end" size="16" type="text" value="" readonly>                    
+                    <input class="form-control"  name="end" size="16" type="text" value="" required="">                    
 					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
        </div>    
     </div>
     
     <div class="col-md-2">
         Adults<br>
-        <select name="adult">
+        <select name="adult" required="">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>                

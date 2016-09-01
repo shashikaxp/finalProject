@@ -136,7 +136,7 @@ $(".rooms-count").change(function(){
               
 		
 			   	if( window.count == window.select_num){						
-					window.location = "index.php" ;}
+					window.location = "payment.php" ;}
 				
                 window.count++
 	
