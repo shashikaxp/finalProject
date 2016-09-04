@@ -29,6 +29,8 @@ body::-webkit-scrollbar-thumb {
     outline: 0px solid #e6e6e6;
 }
 
+
+
 .center {
     margin: 0 auto;
     text-align: center;
@@ -49,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 .wrapper {  
     min-height: 100% !important;
     margin-bottom: -80px;
-   
+	   
 }
 
 .wrapper:after {
@@ -254,6 +256,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #2B2B2B;
     height: 80px;
 	font-family: 'Montserrat';
+	clear: both;
    
 }
 

@@ -32,7 +32,7 @@ while($rows = mysql_fetch_array($query))
 	$output .=	'<ul class="room-main">' ;
 	$output .=	'<li>Bed  <span class="italic">'. $row["bed"] .'</span>   &nbsp;&nbsp;/  &nbsp;&nbsp;   </li>';
 	$output .=	'<li>Max <span class="italic">' . $max_ppl .' people</span>   &nbsp; &nbsp; /  &nbsp;&nbsp;   </li>' ;
-	$output .=	'<li>View <span class="italic">'. $row["view"] .'</span></li>' ;
+	$output .=	'<li>View <span class="italic">'. $row["view"] .'</span></li>' ;		
 	$output .=	'</ul>' ;
 				
 				
@@ -42,6 +42,8 @@ while($rows = mysql_fetch_array($query))
 	
     $output .=  '<input type="hidden" value="'.$row["type"].'" class="rm_name">';
     $output .=  '<input type="hidden" value="'.$row["bed"].'" class="rm_bed">';
+	$output .=  '<input type="hidden" value="'.$a.'" class="rm_id">';
+	$output .=  '<input type="hidden" value="'.$row["view"].'" class="view">';
              
 	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span>' ;
 			

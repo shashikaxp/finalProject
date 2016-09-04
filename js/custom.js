@@ -21,35 +21,30 @@ $('.form_date').datetimepicker({
 $(".rooms-count").change(function(){
 	
 	var val = $(".rooms-count").val();
-	var num = 0;
 	$(".aa").remove();
 	
+
 	
-	
-	var redda =  '<div class="aa"><div class="col-md-4 "><br><div class="center">Room 1<br></div></div>' ;
+	for( var num = 1 ; num < val ; num ++ ){	
+		
+		var redda =  '<div class="aa"><div class="col-md-4 "><br><div class="center">Room '+(num+1)+'<br></div></div>' ;
 		redda +=	'<div class="col-md-4 col-xm-12">Adults';
-		redda +=  '<select id="3" name="adult"  class="soflow search-room" value="<?php echo $_SESSION["adult"] ?>">';	
+		redda +=  '<select id="3" name="adult'+(num+1)+'"  class="soflow adult-class search-room" value="<?php echo $_SESSION["adult"] ?>">';	
 	//	redda +=	'<option value="" selected><?php echo $_SESSION["'+adult+'"] ?></option>';
          redda +=           '<option value="1">1</option>';
          redda +=           '<option value="2">2</option>';
          redda +=          '<option value="3">3</option></select></div>';
 				
-		redda +=     '<div class="col-md-4 col-xm-12" >Children<select id="4" name="child" class="soflow search-room">';
+		redda +=     '<div class="col-md-4 col-xm-12" >Children<select id="4" name="child'+(num+1)+'" class="soflow child-class search-room">';
 	//	redda +=			'<option value="<?php echo $_SESSION["'+child+'"] ?>" selected><?php echo $_SESSION["'+child+'"] ?></option>' ;
 		redda +=			'<option value="0">0</option>' ;
          redda +=           '<option value="1">1</option>' ;
         redda +=            '<option value="2">2</option>' ;
         redda +=            '<option value="3">3</option></select></div></div>' ;
-	
-	
-	
-	
-	
-	
-	while( num < val-1 ){
-		var div = '<div class="row"><div class="col-md-4 aa"><br><span>Room ' +  (num+2)  + ' </span></div><div class="col-md-4 col-xm-12">Adults<br><select name="adult"  class="soflow"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div><div class="col-md-4 col-xm-12">Children<br><select name="child" class="soflow"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div></div>';
-				$(".room-count-list").append(redda);
-				num++;
+		
+		$(".room-count-list").append(redda);
+			
+				
 	} 
 	
 });	
@@ -63,7 +58,8 @@ $(".rooms-count").change(function(){
 		 var adult = $("#3").val();
 		 var child = $("#4").val();
 		 
-		 var did = $(this).attr("id");
+		 
+		 var did = $(this).data("id");
 		 var value = $(this).val();
 		if( did == 1){			
 			arrival = value;
@@ -110,15 +106,16 @@ $(".rooms-count").change(function(){
  
          var name = $(this).closest(".bb").find(".rm_name").val() ;
         var bed = $(this).closest(".bb").find(".rm_bed").val() ;
-        
-   
+		var id =  $(this).closest(".bb").find(".rm_id").val() ;
+        var view =  $(this).closest(".bb").find(".view").val() ;
+        	
         
         if(name != '' && bed != '')  
            {  
                 $.ajax({  
                      url:"functions/selected-rooms_ajax.php",  
                      method:"post", 
-					 data:({name:name,bed:bed,count:window.count}),  
+					 data:({name:name,bed:bed,count:window.count,rmid:id,view:view,number:window.select_num}),  
                      dataType:"text",  
                      success:function(data)
                      {  
@@ -129,14 +126,21 @@ $(".rooms-count").change(function(){
 						 
                          $(".select_room_header").removeClass("hidden");
                           $('#selected-room').append(data); 
+						 
+						 
                          
                          
                      }  
                 }); 
               
-		
-			   	if( window.count == window.select_num){						
-					window.location = "payment.php" ;}
+			  
+			   	if( window.count == window.select_num){	
+				//	window.location = "payment.php" ;
+					setTimeout( function () { 
+						$('#sr_form').submit();
+						}, 300);
+					
+					}
 				
                 window.count++
 	
@@ -149,6 +153,21 @@ $(".rooms-count").change(function(){
 
       });
 
+	
+	/* termes and condition  */
+	
+	
+	$('#terms').change(function(){
+    $('#payment_btn').prop('disabled', !this.checked);
+			});
+	
+	
+	
+//	$("#payment_btn").on('click',function(){
+//		$("#rmi_form").submit();
+//	});
+	
+	
 });
 
 

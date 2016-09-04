@@ -30,11 +30,16 @@
 	<div class="col-md-4 sr-search">
 		
 		<h3>Your Reservation</h3>
-	
+		
         <h4 class="select_room_header hidden"> <br>&nbsp;&nbsp; Selected Rooms</h4>
-        <div id="selected-room">
-        
-        </div>
+       
+			<form action="payment.php" method="post" id="sr_form">
+				<div id="selected-room">
+			   	</div>		
+		
+		
+	
+		
 		
 		   <div class="col-md-10 col-md-offset-1">        
         Check In <br>
@@ -70,7 +75,7 @@
 			
 		<div class="col-md-4 col-xm-12">
         Adults
-        <select id="3" name="adult"  class="soflow search-room" value="<?php echo $_SESSION["adult"] ?>">
+        <select id="3" name="adult1"  class="soflow search-room" value="<?php echo $_SESSION["adult"] ?>">
 					<option value="<?php echo $_SESSION['adult'] ?>" selected><?php echo $_SESSION['adult'] ?></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -80,7 +85,7 @@
 				
 		<div class="col-md-4 col-xm-12" >
         Children
-            <select id="4" name="child" class="soflow search-room">
+            <select  id="4" name="child1" class="soflow search-room">
 					<option value="<?php echo $_SESSION["child"] ?>" selected><?php echo $_SESSION['child'] ?></option>
 					<option value="0">0</option>
                     <option value="1">1</option>
@@ -91,7 +96,8 @@
 				
 		
 		</div>
-		
+			</form>
+ 			 
 		
 	</div>
 	
