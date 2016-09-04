@@ -130,8 +130,6 @@
 </div>
 
 
-	
-<!--<form action="functions/customer_details.php" method="post" class="form-horizontal">-->
 <fieldset>
 
 <!-- Text input-->

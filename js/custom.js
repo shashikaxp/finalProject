@@ -163,9 +163,9 @@ $(".rooms-count").change(function(){
 	
 	
 	
-//	$("#payment_btn").on('click',function(){
-//		$("#rmi_form").submit();
-//	});
+	$("#payment_btn").on('click',function(){
+		$("#rmi_form").submit();
+	});
 	
 	
 });

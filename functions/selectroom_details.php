@@ -5,7 +5,7 @@ $result = mysql_query("SELECT * FROM room");
 while($row = mysql_fetch_array($result))
   {
   $a=$row['room_id'];
-   $query = mysql_query("SELECT sum(qty_reserve) FROM roominventory where arrival <= '".$_SESSION["arival"]."'  and departure >= '".$_SESSION["departure"]."' and room_id='$a'");
+   $query = mysql_query("SELECT sum(qty_reserve) FROM roominventory where arrival <= '".$_SESSION["arival"]."'  and departure >= '".$_SESSION["departure"]."' and room_id='$a' and status='confirm'");
 while($rows = mysql_fetch_array($query))
   {
   $inogbuwin=$rows['sum(qty_reserve)'];

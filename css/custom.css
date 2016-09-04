@@ -249,6 +249,11 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #eebc24;
 }
 
+.hr-large{
+    width: 100%;
+    border: 1px solid #eebc24;
+}
+
 /* Footer CSS */
 
 
@@ -379,6 +384,56 @@ select.soflow {
     background-color:azure;
 }
 
+
+
+/* Rooms Page */
+
+
+.room-details{
+	font-family: Montserrat;
+}
+
+.room-details ul, span ,button{
+	
+	margin-left: 10%;
+}
+
+.room-details button{
+     margin: 30px 10%;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    padding: 8px 25px;
+    font-size: 17px;
+    background-color: #eebc24;
+
+}
+
+.room-details ul{
+	font-size: 16px;
+	margin: 30px 10%;
+}
+
+.room-details ul li{
+	margin: 8px;
+}
+
+.room-details{
+	font-size: 16px;
+	}
+
+.room-details img{
+	width: 90%;
+}
+
+.room-details hr{
+	
+	margin: 6px 0px;
+}
+
+.room-details{
+	margin: 20px 0;
+}
 
 /* Boostrap focus */
 
