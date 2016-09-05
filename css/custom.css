@@ -408,7 +408,7 @@ select.soflow {
 	font-family: Montserrat;
 }
 
-.room-details ul, span ,button{
+.room-details ul span button{
 	
 	margin-left: 10%;
 }
@@ -436,6 +436,7 @@ select.soflow {
 
 .room-details{
 	font-size: 16px;
+	margin: 20px 0;
 	}
 
 .room-details img{
@@ -448,7 +449,7 @@ select.soflow {
 }
 
 .room-details{
-	margin: 20px 0;
+	
 }
 
 
@@ -485,25 +486,61 @@ select.soflow {
 	font-size: 0.9em;
 }
 
+/* contact us */
+.contact{
+	font-family: 'Montserrat';
+	margin-bottom: 25px;
+}
+
+.before-contact p{
+	font-size: 16px;
+	padding: 5px 0;
+}
+
+.social-contact span {
+	color: black;
+	padding: 5px 0px;
+}
+
+.contact-info li{
+	padding: 5px 0px;
+	font-size: 16px;
+}
+
+.contact h3{
+	margin-top: 45px;
+}
+
+.contact-btn{
+
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    padding: 8px 25px;
+    font-size: 17px;
+    background-color: #eebc24;
+	
+}
+
+.map{
+	margin: 25px 10px;
+}
+
 /* Boostrap focus */
 
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {   
+.modal-open {
+	padding-right: 0 !important; }
+
+.modal-content{
+	font-size: 18px;
+	padding: 20px;
+}
+	
+/*	overflow: auto !important;*/
+
+
+.form-control:focus {
   border-color: goldenrod;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px goldenrod;
-  outline: 0 none;
+  box-shadow:  0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px goldenrod;
+	outline: 0 none;
 }

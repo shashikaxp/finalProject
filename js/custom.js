@@ -169,14 +169,27 @@ $(".rooms-count").change(function(){
 		$(".se-pre-con").fadeOut("slow");;
 	});
 	
+	/* Contact us */
 	
+	$("#contact_form").submit(function(){
+		
+		 $.ajax({  
+                     url:$(this).attr('action'),  
+                     method:"post", 
+					 data:$('#contact_form').serialize(),                      
+                     success:function(data)
+                     {  
+                         $("#contact-modal").modal("show");
+						 
+                     }  
+			 
+                }); 
+		
+		return false;
+	})
+
 	
-	
-	
-//	$(".rd_button").on('click',function(){
-//		$("#rmi_form").submit();
-//	});
-	
-	
+	 $("#contact-modal").modal("show");
+
 });
 
