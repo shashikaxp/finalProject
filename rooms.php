@@ -33,10 +33,10 @@
 	$output	.=	'<h4><br>'. $row["type"] .' - '. $row["bed"] .'</h4>';
 	$output	.=	'<hr class="hr-large">';				
 	$output	.=	'<ul >';
-	$output .=	'<li>Room Size <i>'. $row["sqm"] .' sqm</i></li>';
-	$output	.=	'<li>View <i>'. $row["view"] .'</i></li>';
-	$output	.=	'<li>Max <i>'. $row["max_adult"] .' Adults</i> </li>';
-	$output	.=	'<li>Bed <i>'. $row["bed"] .'</i></li>';				
+	$output .=	'<li><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Room Size <i>'. $row["sqm"] .' sqm</i></li>';
+	$output	.=	'<li><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;View <i>'. $row["view"] .'</i></li>';
+	$output	.=	'<li><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Max <i>'. $row["max_adult"] .' Peoples</i> </li>';
+	$output	.=	'<li><i class="fa fa-check-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Bed <i>'. $row["bed"] .'</i></li>';				
 	$output	.=	'</ul>';			
 	$output	.=	'<span> Start From $'. $row["rate"] .' / Night<br> </span>';
 	$output	.=	'<form class="room_form" method="post" action="room_details.php">';

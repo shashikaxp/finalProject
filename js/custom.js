@@ -162,12 +162,21 @@ $(".rooms-count").change(function(){
 			});
 	
 	
+	/* Loading gif */
 	
-	$("#payment_btn").on('click',function(){
-		$("#rmi_form").submit();
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
 	});
 	
 	
+	
+	
+	
+//	$(".rd_button").on('click',function(){
+//		$("#rmi_form").submit();
+//	});
+	
+	
 });
-
 

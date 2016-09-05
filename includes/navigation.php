@@ -14,7 +14,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="index.php">Amenities</a></li>
-            <li><a href="doc.php">Room & Service</a></li>
+            <li><a href="rooms.php">Room & Service</a></li>
             <li><a href="index.php">Contact Us </a></li>
             <li><a href="index.php">About Us</a></li>
             <li class="dropdown">
