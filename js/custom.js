@@ -190,11 +190,15 @@ $(".rooms-count").change(function(){
 
 	
 	/* amenities */
+
 	
-	$(".amenities").hover(function(){ 		
-   		$(this).toggleClass('amenities-shadow');
-					});
-	
+	$('.amenities').hover(function(){        
+		$(this).addClass('amenities-shadow');
+		$(this).animate({ height:'+310px', width:'+310px' });	
+	}, function(){
+    	$(this).removeClass('amenities-shadow');
+   		$(this).animate({ height:'+300px', width:'+300px' });
+	});
 	
 	
 	
