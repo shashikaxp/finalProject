@@ -186,10 +186,94 @@ $(".rooms-count").change(function(){
                 }); 
 		
 		return false;
-	})
+	});
 
 	
-	 $("#contact-modal").modal("show");
+	/* amenities */
+	
+	$(".amenities").hover(function(){ 		
+   		$(this).toggleClass('amenities-shadow');
+					});
+	
+	
+	
+	
+	$(".amenities").on('click', function(){ 	
+		
+		
+		var id = $(this).find(".amenities_id").val();
+		
+   		
+		 $.ajax({  
+                     url:"functions/amenities_ajax.php",  
+                     method:"post", 
+					 data:({id:id}),   
+			 	     dataType:"text",	
+                     success:function(data)
+                     {  
+			 			$('#amanities-modal').append(data); 
+                        $('#amenities'+id+'').modal("show");
+						 
+                     }  
+			 
+                }); 
+		
+		
+		
+	});
+	
+	
+	
+	
+	
+	
+	
+	/* about us slider */
+	
+	var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 2000,
+              $CaptionSliderOptions: {
+             	 $Class: $JssorCaptionSlideo$,
+                $Transitions: {$Duration:1200,$Opacity:2},
+                $Breaks: [
+                  [{d:2000,b:1000}]
+                ]
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+	
+	
+	
+	
+	
+	
+	
 
 });
 

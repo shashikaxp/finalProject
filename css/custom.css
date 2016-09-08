@@ -544,3 +544,100 @@ select.soflow {
   box-shadow:  0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px goldenrod;
 	outline: 0 none;
 }
+
+
+/* about Us */
+.about-us {
+	font-family: 'Montserrat';
+}
+
+.about-us p{
+	font-size: 15px;
+}
+
+.our-staff{
+	
+margin-bottom: 40px;
+}
+
+/* About us slider */
+
+
+        /* jssor slider bullet navigator skin 01 css */
+        /*
+        .jssorb01 div           (normal)
+        .jssorb01 div:hover     (normal mouseover)
+        .jssorb01 .av           (active)
+        .jssorb01 .av:hover     (active mouseover)
+        .jssorb01 .dn           (mousedown)
+        */
+        .jssorb01 {
+            position: absolute;
+        }
+        .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 12px;
+            height: 12px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            overflow: hidden;
+            cursor: pointer;
+            border: #000 1px solid;
+        }
+        .jssorb01 div { background-color: gray; }
+        .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+        .jssorb01 .av { background-color: #fff; }
+        .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+        /* jssor slider arrow navigator skin 02 css */
+        /*
+        .jssora02l                  (normal)
+        .jssora02r                  (normal)
+        .jssora02l:hover            (normal mouseover)
+        .jssora02r:hover            (normal mouseover)
+        .jssora02l.jssora02ldn      (mousedown)
+        .jssora02r.jssora02rdn      (mousedown)
+        */
+        .jssora02l, .jssora02r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 55px;
+            height: 55px;
+            cursor: pointer;
+            background: url('../images/about_us/a02.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora02l { background-position: -3px -33px; }
+        .jssora02r { background-position: -63px -33px; }
+        .jssora02l:hover { background-position: -123px -33px; }
+        .jssora02r:hover { background-position: -183px -33px; }
+        .jssora02l.jssora02ldn { background-position: -3px -33px; }
+        .jssora02r.jssora02rdn { background-position: -63px -33px; }
+
+
+/* amenities page */
+
+.amenities {
+	border: 1px solid #eebc24;
+	margin: 10px;
+    border-radius: 8px;
+	font-family: 'Montserrat';
+	height: 250px;
+	
+	
+   }
+
+.am-img{
+	margin-bottom: 20px;
+	
+}
+
+.amenities h4 {
+	margin : 20px auto; }
+
+.amenities-shadow{
+	 box-shadow: 5px 5px 8px #eebc24;
+		cursor: pointer;
+}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2016 at 10:07 AM
+-- Generation Time: Sep 08, 2016 at 10:25 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.21
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `amenities` (
   `amenities_id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `pic` varchar(100) NOT NULL,
   `des` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -36,19 +37,19 @@ CREATE TABLE `amenities` (
 -- Dumping data for table `amenities`
 --
 
-INSERT INTO `amenities` (`amenities_id`, `pic`, `des`) VALUES
-(1, 'amenities/IconAC.jpg', 'Every room in the Tamera Plaza Inn has Air Conditioning. Each room has an easy-to-use remote control to set your comfort level without having to leave the bed.'),
-(2, 'amenities/IconBkfst.jpg', 'Upon your arrival, you will recieve a complimentary "Welcome Drink" for your travel here. Also, there is Free Breakfast for all accomodations.'),
-(3, 'amenities/IconCocktail.jpg', 'Located in the lobby, we offer a full-service Bar & Coffee Shop with a variety of beverages. '),
-(4, 'amenities/IconFunction.jpg', 'Located on the 4th floor, we hold many activities for all occasions here in the Function Room. One can reserve this room for conferences, parties, and more.'),
-(5, 'amenities/IconGen.jpg', 'We have generators on standby 24 hours a day, 7 days a week in an event of a "Brown Out", providing uninterrupted electricity service to the building.'),
-(6, 'amenities/IconLaundry.jpg', 'Whether on business or pleasure, we provide laundry and pressing service here. We deliver your clothes to your room, or in person to accomodate your schedule.'),
-(7, 'amenities/IconLongDist.jpg', 'Need to call home or send documents? We provide Fax services and phones equipped for Long Distance calls to home, the office, or anywhere in between.'),
-(8, 'amenities/restaurantLG.jpg', 'Not only a great place to eat, but has great street-side view of Bacolod City. Try the famous "Tamera Chicken", great for the whole family!'),
-(9, 'amenities/IconShower.jpg', 'Every room is individualy equipped with personal water heaters in the showers. Fully adjustable, you''ll always have a comfortable shower without burning or freezing yourself.'),
-(10, 'amenities/IconTaxi.jpg', 'Have a meeting to go to or just want to go out? You can schedule trips anywhere around Bacolod City by utilizing our transportation service offered here.'),
-(11, 'amenities/IconTV.jpg', 'No room would be complete without complimentary Cable TV and telephone service in every room. Channels may vary.'),
-(12, 'amenities/SmIconWiFi.png', 'All area of Tamera Plaza Inn is wifi ready');
+INSERT INTO `amenities` (`amenities_id`, `name`, `pic`, `des`) VALUES
+(1, 'Air Conditioning in Every Room', 'amenities/IconAC.jpg', 'Every room in the Tamera Plaza Inn has Air Conditioning. Each room has an easy-to-use remote control to set your comfort level without having to leave the bed.'),
+(2, 'Free Breakfast and Coffee', 'amenities/IconBkfst.jpg', 'Upon your arrival, you will recieve a complimentary "Welcome Drink" for your travel here. Also, there is Free Breakfast for all accomodations.'),
+(3, 'Bar and Coffee Shop', 'amenities/IconCocktail.jpg', 'Located in the lobby, we offer a full-service Bar & Coffee Shop with a variety of beverages. '),
+(4, 'Function Room', 'amenities/IconFunction.jpg', 'Located on the 4th floor, we hold many activities for all occasions here in the Function Room. One can reserve this room for conferences, parties, and more.'),
+(5, '24 Hour Standby Genarator', 'amenities/IconGen.jpg', 'We have generators on standby 24 hours a day, 7 days a week in an event of a "Brown Out", providing uninterrupted electricity service to the building.'),
+(6, 'Laundry & Pressing', 'amenities/IconLaundry.jpg', 'Whether on business or pleasure, we provide laundry and pressing service here. We deliver your clothes to your room, or in person to accomodate your schedule.'),
+(7, 'Long Distance Call & FAX Services', 'amenities/IconLongDist.jpg', 'Need to call home or send documents? We provide Fax services and phones equipped for Long Distance calls to home, the office, or anywhere in between.'),
+(8, 'Restaurant ', 'amenities/restaurantLG.jpg', 'Not only a great place to eat, but has great street-side view of Bacolod City. Try the famous "Tamera Chicken", great for the whole family!'),
+(9, 'Hot and Cold Showers', 'amenities/IconShower.jpg', 'Every room is individualy equipped with personal water heaters in the showers. Fully adjustable, you''ll always have a comfortable shower without burning or freezing yourself.'),
+(10, 'Taxi ', 'amenities/IconTaxi.jpg', 'Have a meeting to go to or just want to go out? You can schedule trips anywhere around Bacolod City by utilizing our transportation service offered here.'),
+(11, 'Telephone and Cable TV', 'amenities/IconTV.jpg', 'No room would be complete without complimentary Cable TV and telephone service in every room. Channels may vary.'),
+(12, 'Free WIFI Zone', 'amenities/SmIconWiFi.jpg', 'All area of Tamera Plaza Inn is wifi ready');
 
 -- --------------------------------------------------------
 
@@ -60,6 +61,7 @@ CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL,
   `name` varchar(60) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `subject` text NOT NULL,
   `content` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -67,13 +69,12 @@ CREATE TABLE `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`comment_id`, `name`, `email`, `content`) VALUES
-(15, 'mecile', 'mecile_26oligo@yahoo.com', 'bhjkadgasj,dsads'),
-(14, 'arlene', 'arlenepasigado@yahoo.com', 'ka gamai ka bed....\r\n\r\n\r\n\r\n\r\n'),
-(13, 'qke.weqe', 'hannah@hotmail.com', 'wala ko mai e komment'),
-(12, 'jhgjhgjhgjh', 'jhg', 'jhgjhg'),
-(11, 'ttuyt', 'tuyt', 'uytuy'),
-(10, 'gf', 'hfhgfhgfh', 'gfhgf');
+INSERT INTO `comment` (`comment_id`, `name`, `email`, `subject`, `content`) VALUES
+(13, 'qke.weqe', 'hannah@hotmail.com', '', 'wala ko mai e komment'),
+(12, 'jhgjhgjhgjh', 'jhg', '', 'jhgjhg'),
+(11, 'ttuyt', 'tuyt', '', 'uytuy'),
+(10, 'gf', 'hfhgfhgfh', '', 'gfhgf'),
+(57, 're', 're@r', 're', '');
 
 -- --------------------------------------------------------
 
@@ -278,7 +279,7 @@ ALTER TABLE `amenities`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT for table `customer`
 --

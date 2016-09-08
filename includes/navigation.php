@@ -13,18 +13,10 @@
         <ul class="nav navbar-nav navbar-nav-custom navbar-right">
             <li><a href="index.php">Home</a></li>
             <li><a href="gallery.php">Gallery</a></li>
-            <li><a href="index.php">Amenities</a></li>
+            <li><a href="Amenities.php">Amenities</a></li>
             <li><a href="rooms.php">Room & Service</a></li>
-            <li><a href="index.php">Contact Us </a></li>
-            <li><a href="index.php">About Us</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservation <span class="caret" style="margin-right:10px;"></span></a>
-                <ul class="dropdown-menu drop-down-custom">
-                    <li><a href="#">Modifie</a></li>
-                    <li><a href="#">Cancel</a></li>
-                    <li><a href="#">New</a></li>
-                </ul>
-            </li>
+            <li><a href="contact_us.php">Contact Us </a></li>
+            <li><a href="about_us.php">About Us&nbsp;&nbsp;</a></li>            
         </ul>
     </div>
 </nav>
