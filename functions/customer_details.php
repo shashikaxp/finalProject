@@ -1,18 +1,19 @@
-
+ <?php include "config.php" ?>
 
 <?php 
 	
-$fname = $_POST["f_name"] ;
-$lname = $_POST["l_name"] ;
-$addr_line1 = $_POST["addr_line1"] ;
-$addr_line2 = $_POST["addr_line2"] ;
-$city = $_POST["city"] ;
-$zip = $_POST["zip_code"] ;
-$country =	$_POST["country"] ; 
-$contact = $_POST["contact"] ;
-$email	= $_POST["email"] ;
-	
+session_start();
 
+	$fname   = $_SESSION["fname"] ;
+	$lname   = $_SESSION["lname"]	;
+	$addr_line1  = $_SESSION["addr_line1"] ;
+	$addr_line2	 = $_SESSION["addr_line2"] ;
+	$city  = $_SESSION["city"] ;
+	$zip     = $_SESSION["zip"];
+	$country  = $_SESSION["country"] ;
+	$contact   = $_SESSION["contact"] ;
+	$email    = $_SESSION["email"]	;
+	
 	
 $sql= "INSERT INTO customer (f_name, l_name, addr_line1, addr_line2, city, zip_code , country, contact, email   )
 VALUES ('$fname', '$lname', '$addr_line1' ,'$addr_line2' ,'$city' ,'$zip' ,'$country' ,'$contact' ,'$email')";
@@ -22,18 +23,20 @@ VALUES ('$fname', '$lname', '$addr_line1' ,'$addr_line2' ,'$city' ,'$zip' ,'$cou
 $result = mysql_query($sql);
 
 $cus_id = mysql_insert_id();
-
+	
 if($result){
+
 	
 	
-	session_start();
 
 $arrival = $_SESSION["arival"];
 $departure = $_SESSION["departure"] ;	
+$child =  $_SESSION{"child_room1"} + $_SESSION{"child_room2"} +$_SESSION{"child_room3"} ;
+$adult = 	$_SESSION{"adult_room1"}+$_SESSION{"adult_room2"}+$_SESSION{"adult_room3"} ;
 
 
 $reservation = "INSERT INTO reservation (arrival, departure, adults, child, status, customer_id )
-VALUES ('$arrival', '$departure', '2' ,'3' ,'pending' , '$cus_id' )";
+VALUES ('$arrival', '$departure', '$child' ,'$adult' ,'pending' , '$cus_id' )";
 
 
 $result2 = mysql_query($reservation);
@@ -46,16 +49,16 @@ if($result2){
 	
 
 	
-$count = $_POST["count"] ;  
+$count = $_SESSION["count"] ;  
 $n = 1 ;	
 	
 
 	
 while( $n <= $count ){
 	
-$rmid = $_POST["rmid_room$n"] ;	
-$child = $_POST["child_room$n"];
-$adult = $_POST["adult_room$n"];	
+$rmid = $_SESSION["rmid_room$n"] ;	
+$child = $_SESSION["child_room$n"];
+$adult = $_SESSION["adult_room$n"];	
 	
 	
 

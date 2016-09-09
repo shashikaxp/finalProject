@@ -108,14 +108,15 @@ $(".rooms-count").change(function(){
         var bed = $(this).closest(".bb").find(".rm_bed").val() ;
 		var id =  $(this).closest(".bb").find(".rm_id").val() ;
         var view =  $(this).closest(".bb").find(".view").val() ;
+		var rate =  $(this).closest(".bb").find(".rate").val();
         	
-        
+       
         if(name != '' && bed != '')  
            {  
                 $.ajax({  
                      url:"functions/selected-rooms_ajax.php",  
                      method:"post", 
-					 data:({name:name,bed:bed,count:window.count,rmid:id,view:view,number:window.select_num}),  
+					 data:({name:name,bed:bed,count:window.count,rmid:id,view:view,number:window.select_num,rate:rate}),  
                      dataType:"text",  
                      success:function(data)
                      {  
@@ -157,6 +158,7 @@ $(".rooms-count").change(function(){
 	/* termes and condition  */
 	
 	
+
 	$('#terms').change(function(){
     $('#payment_btn').prop('disabled', !this.checked);
 			});

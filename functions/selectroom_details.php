@@ -44,6 +44,9 @@ while($rows = mysql_fetch_array($query))
     $output .=  '<input type="hidden" value="'.$row["bed"].'" class="rm_bed">';
 	$output .=  '<input type="hidden" value="'.$a.'" class="rm_id">';
 	$output .=  '<input type="hidden" value="'.$row["view"].'" class="view">';
+	$output .=  '<input type="hidden" value="'.$row["rate"].'" class="rate">';
+	
+	
              
 	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span>' ;
 			
