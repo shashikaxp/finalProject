@@ -14,6 +14,13 @@
 	$_SESSION["rate_room2"] = 0;
 	$_SESSION["rate_room3"] = 0;
 
+
+	$_SESSION{"child_room2"} = 0 ;
+	$_SESSION{"adult_room2"} = 0 ;
+
+	$_SESSION{"child_room3"} = 0 ;
+	$_SESSION{"adult_room3"} = 0 ;
+
 	
 	$n = 1  ;
 
@@ -86,6 +93,15 @@
 
 
 <fieldset>
+	
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="nic">NIC / Passport</label>  
+  <div class="col-md-4">
+  <input id="nic" name="nic" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>	
 
 <!-- Text input-->
 <div class="form-group">

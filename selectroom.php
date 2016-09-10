@@ -5,8 +5,6 @@
 <?php include "includes/navigation.php" ?>
 
 
-
-
 <?php  
 	
 		

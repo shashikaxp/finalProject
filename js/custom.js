@@ -155,13 +155,50 @@ $(".rooms-count").change(function(){
       });
 
 	
-	/* termes and condition  */
+	/* payment */
 	
+//	
+	$('#nic').change(function(){
+		
 	
+		var val = $(this).val();
 
+		$.ajax({  
+                     url:"functions/nic_ajax.php",  
+                     method:"post", 					
+					 data: ({nic:val }) ,  
+					  success:function(data)
+                     {  
+                        var info = JSON.parse(data);						 	
+						
+						$("#f_name").val(info[2]);
+						 $("#l_name").val(info[3]);
+						 $("#addr_line1").val(info[4]);
+						 $("#addr_line2").val(info[5]);
+						 $("#city").val(info[6]);
+						 $("#zip_code").val(info[7]);
+						 $("#country").val(info[8]);
+						 $("#contact").val(info[9]);
+						 $("#email").val(info[10]);
+						 
+						 
+						 
+						 
+						 
+						 
+                     }  
+			 
+                }); 
+			
+	});
+	
+	
 	$('#terms').change(function(){
     $('#payment_btn').prop('disabled', !this.checked);
 			});
+	
+	
+
 	
 	
 	/* Loading gif */
@@ -276,8 +313,7 @@ $(".rooms-count").change(function(){
 	
 	
 	
-	
-	
+
 	
 	
 

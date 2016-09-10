@@ -647,3 +647,13 @@ margin-bottom: 40px;
 	 box-shadow: 5px 5px 8px #eebc24;
 		cursor: pointer;
 }
+
+/* paypal payment */
+
+.select_room_header{
+	margin: 25px auto;
+}
+
+.selected-room{
+		font-family: 'Montserrat';
+}

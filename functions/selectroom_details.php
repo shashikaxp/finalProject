@@ -48,7 +48,7 @@ while($rows = mysql_fetch_array($query))
 	
 	
              
-	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span>' ;
+	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span><span><i>&nbsp; &nbsp; &nbsp; Start From $'.$row["rate"].' / Night </i></span>' ;
 			
 				
 	$output .=	'</div></div></div></div>' ;	
