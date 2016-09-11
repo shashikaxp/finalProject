@@ -32,13 +32,19 @@
 </footer>
 
 <!-- JS -->
-<script src="js/jquery-1.11.3.min.js"></script>
+
+<!--<script $.noConflict( true ) src="js/jquery-2.2.4.min.js"></script>-->
+<script  src="js/jquery-2.0.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/admin_panel.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
 
+
+<!--data table-->
 
 
 

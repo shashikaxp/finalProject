@@ -15,6 +15,7 @@
 
 <?php 
 	
+	
 	$nic    = $_SESSION["nic"]	;
 	$fname   = $_SESSION["fname"] ;
 	$lname   = $_SESSION["lname"]	;
@@ -33,8 +34,8 @@ $nic_check = "select * from customer where nic = '$nic' " ;
 $result_nic = mysql_query($nic_check) or die(mysql_error()); 
 
 
-if($result_nic){
-	
+if(!$result_nic){
+
 	while($rows = mysql_fetch_array($result_nic)){		
 			$cus_id = $rows['cus_id'] ;
 		
@@ -59,10 +60,12 @@ $arrival = $_SESSION["arival"];
 $departure = $_SESSION["departure"] ;	
 $child =  $_SESSION{"child_room1"} + $_SESSION{"child_room2"} +$_SESSION{"child_room3"} ;
 $adult = 	$_SESSION{"adult_room1"}+$_SESSION{"adult_room2"}+$_SESSION{"adult_room3"} ;
+$tot =  $_SESSION["total"];
 
 
-$reservation = "INSERT INTO reservation (arrival, departure, adults, child, status, customer_id )
-VALUES ('$arrival', '$departure', '$child' ,'$adult' ,'pending' , '$cus_id' )";
+
+$reservation = "INSERT INTO reservation (arrival, departure, adults, child, status, price , customer_id )
+VALUES ('$arrival', '$departure', '$child' ,'$adult' ,'Confirm' , '$tot' , '$cus_id' )";
 
 
 $result2 = mysql_query($reservation);
@@ -89,7 +92,7 @@ $adult = $_SESSION["adult_room$n"];
 	
 
 $room_inventory = "INSERT INTO roominventory (arrival, departure, qty_reserve, room_id, status, max_child, max_adult,	reservation_id  )
-VALUES ('$arrival', '$departure', '1' ,'$rmid' ,'confirm' , '$child', '$adult' , '$reservation_id' )";
+VALUES ('$arrival', '$departure', '1' ,'$rmid' ,'Pending' , '$child', '$adult' , '$reservation_id' )";
 		
 	
 $result3 = mysql_query($room_inventory);
@@ -117,7 +120,7 @@ if($result2){
 </div>
 
 
-<?php  header('Refresh: 2; URL=http://localhost/final/');
+<?php header('Refresh: 2; URL=http://localhost/final/');
 	   exit();	?>
 
 <?php include "includes/footer.php" ?>

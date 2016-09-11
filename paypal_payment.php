@@ -47,8 +47,11 @@ $days = ( strtotime($_SESSION["departure"]) - strtotime($_SESSION["arival"]) )  
 				
 				} 
 			
+			
 			$tot = ($_SESSION["rate_room1"]*$days)+($_SESSION["rate_room2"]*$days)+($_SESSION["rate_room3"]*$days);
+			$_SESSION["total"] = $tot;
 			echo "<p><b>Total Amount : <i>$$tot </i></b></p>";
+			
 			
 			
 		?>	
