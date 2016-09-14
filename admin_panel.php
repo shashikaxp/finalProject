@@ -6,11 +6,11 @@
 
 <!--tab-->
 
-<div class="col-md-12 container full-panel">
+<div class="col-md-12 container-fluid">
  
-<div class="col-xs-1"> <!-- required for floating -->
+<div class="col-xs-12" style="margin-top : 80px;"> <!-- required for floating -->
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs tabs-left">
+    <ul class="nav nav-tabs">
       <li class="active"><a id="ap-res" href="#reservation" data-toggle="tab">Reservation</a></li>
       <li><a id="ap-roominventory" href="#roomsinventory" data-toggle="tab">Room Inventory</a></li>
       <li><a id="ap-cus"  href="#customer" data-toggle="tab">Customers</a></li>
@@ -21,7 +21,7 @@
     </ul>
 </div>
 
-<div class="col-xs-11">
+<div class="col-xs-12" style="margin : 30px auto;">
     <!-- Tab panes -->
     <div class="tab-content">
       <div class="tab-pane active" id="reservation"><?php include "AdminPanel/includes/reservation.php" ?></div>

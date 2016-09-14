@@ -1,9 +1,10 @@
 <button id="add-room" class="add-btn">+ Add New</button>
 
+<div class="row">
+
 <table id="room_table" class="display" cellspacing="0" width="100%">
         <thead>
-            <tr>
-                <th>Room ID</th>
+            <tr>              
                 <th>Type</th>
                 <th>Rate</th>
                 <th>Description</th>
@@ -34,13 +35,12 @@
 	
 			while($row = mysql_fetch_array($result)) {
 			
-			$output  =	'<tr>';
-            $output .=  '<td>'.$row["room_id"].'</td>';
+			$output  =	'<tr>';           
             $output .=  '<td>'.$row["type"].'</td>';
             $output .=  '<td>'.$row["rate"].'</td>';
-            $output .=  '<td>'.$row["description"].'</td>';
-            $output .=  '<td>'.$row["description_large"].'</td>';
-            $output .=  '<td><img src="data:image;base64,'.$row["image"].'" class="img room-image img-responsive"></td>';  		    				
+            $output .=  '<td><textarea rows="6" >'.$row["description"].'</textarea></td>';
+            $output .=  '<td><textarea rows="6" >'.$row["description_large"].'</textarea></td>';
+            $output .=  '<td class="col-md-1"><img src="data:image;base64,'.$row["image"].'" class="img room-image img-responsive"></td>';  		    				
 			$output .=  '<td>'.$row["qty"].'</td>';
 			$output .=  '<td>'.$row["max_adult"].'</td>';	
 			$output .=  '<td>'.$row["max_child"].'</td>';
@@ -66,5 +66,5 @@
 </table>
 
 
-
+</div>
 

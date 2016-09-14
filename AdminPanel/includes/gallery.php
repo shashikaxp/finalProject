@@ -1,4 +1,6 @@
 <button id="add-pic" class="add-btn">+ Add New</button>
+<div class="row">
+
 
 <table id="gallery_table" class="display" cellspacing="0" width="100%">
         <thead>
@@ -24,9 +26,9 @@
 				while (($file = readdir($dh)) !== false){
 				if ($file == '.' or $file == '..') continue;
 						$output  =	'<tr>';
-						$output .=  '<td>'."$file".'</td>';
-						$output .=  '<td><div class="container center"><image src='."$dir"."/"."$file".' class="img img-responsive col-md-4 col-md-offset-4 "></div></td>';
-					    $output .=  '<td><i class="fa fa-trash delete-pic" data-pic='."$file".' aria-hidden="true"></i></td>';
+						$output .=  '<td class="col-md-6">'."$file".'</td>';
+						$output .=  '<td class="col-md-2"><div class="center"><image src='."$dir"."/"."$file".' class="img img-responsive"></div></td>';
+					    $output .=  '<td class="col-md-4 pull-right"><i class="fa fa-trash delete-pic" data-pic='."$file".' aria-hidden="true"></i></td>';
          				$output .=  '</tr>';
 						
 					echo $output;
@@ -46,3 +48,4 @@
 </table>
 
 
+</div>

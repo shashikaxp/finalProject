@@ -5,7 +5,7 @@ $result = mysql_query("SELECT * FROM room");
 while($row = mysql_fetch_array($result))
   {
   $a=$row['room_id'];
-   $query = mysql_query("SELECT sum(qty_reserve) FROM roominventory where arrival <= '".$_SESSION["arival"]."'  and departure >= '".$_SESSION["departure"]."' and room_id='$a' and status='confirm'");
+   $query = mysql_query("SELECT sum(qty_reserve) FROM roominventory where arrival <= '".$_SESSION["arival"]."'  and departure >= '".$_SESSION["departure"]."' and room_id='$a' and status='Confirm'");
 while($rows = mysql_fetch_array($query))
   {
   $inogbuwin=$rows['sum(qty_reserve)'];
@@ -48,7 +48,7 @@ while($rows = mysql_fetch_array($query))
 	
 	
              
-	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span><span><i>&nbsp; &nbsp; &nbsp; Start From $'.$row["rate"].' / Night </i></span>' ;
+	$output .=	'<input type="button" value="Select this Room" class="sr-button" style= "margin-top: 10px;"><span>&nbsp; &nbsp; &nbsp; only '.$angavil.' Rooms Available</span><div><i><br>Start From $'.$row["rate"].' / Night </i></div>' ;
 			
 				
 	$output .=	'</div></div></div></div>' ;	

@@ -7,7 +7,7 @@ $(window).load(function() {
 var date = new Date();
 date.setDate(date.getDate());
 
-$('#date1').datetimepicker({
+$('.form-control').datetimepicker({
         language:  'en',
         weekStart: 1,
         todayBtn:  1,
@@ -22,7 +22,7 @@ $('#date1').datetimepicker({
 	
     });
 	
-	$('#date2').datetimepicker({
+	$('.form-control2').datetimepicker({
         language:  'en',
         weekStart: 1,
         todayBtn:  1,
@@ -35,8 +35,8 @@ $('#date1').datetimepicker({
         pickerPosition : "top-left",
 		format: "dd MM yyyy" 
 	
-	
     });
+	
 
 
 	
