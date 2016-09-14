@@ -29,7 +29,7 @@
 	while($row = mysql_fetch_array($result)){
 		
 	$output  =	'<div class="col-md-4 col-sm-6 room-details">';				
-	$output	.=	'<img src="'. $row["image"] .'" class="center img-responsive">';
+	$output	.=	'<img src="data:image;base64,'.$row["image"].'" class="center img-responsive">';
 	$output	.=	'<h4><br>'. $row["type"] .' - '. $row["bed"] .'</h4>';
 	$output	.=	'<hr class="hr-large">';				
 	$output	.=	'<ul >';

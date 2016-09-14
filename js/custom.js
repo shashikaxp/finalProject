@@ -2,9 +2,12 @@ $(window).load(function() {
 
     window.select_num   ;
     window.count = 1 ;
-    
+   
+	
+var date = new Date();
+date.setDate(date.getDate());
 
-$('.form_date').datetimepicker({
+$('#date1').datetimepicker({
         language:  'en',
         weekStart: 1,
         todayBtn:  1,
@@ -13,12 +16,13 @@ $('.form_date').datetimepicker({
 		startView: 2,
 		minView: 2,
 		forceParse: 0,
-        pickerPosition : "top-left"
+	    startDate: date,
+        pickerPosition : "top-left",
+		format: "dd MM yyyy" 
 	
     });
 	
-
-$('.form_date2').datetimepicker({
+	$('#date2').datetimepicker({
         language:  'en',
         weekStart: 1,
         todayBtn:  1,
@@ -27,11 +31,14 @@ $('.form_date2').datetimepicker({
 		startView: 2,
 		minView: 2,
 		forceParse: 0,
-        pickerPosition : "bottom-right"
+	    startDate: date,
+        pickerPosition : "top-left",
+		format: "dd MM yyyy" 
 	
-    });	
 	
-	
+    });
+
+
 	
 $(".rooms-count").change(function(){
 	
@@ -230,6 +237,7 @@ $(".rooms-count").change(function(){
                      success:function(data)
                      {  
                          $("#contact-modal").modal("show");
+						 $("#contact_form").trigger("reset");
 						 
                      }  
 			 
@@ -277,6 +285,7 @@ $(".rooms-count").change(function(){
 	});
 	
 	
+
 	
 	
 	

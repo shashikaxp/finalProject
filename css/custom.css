@@ -531,7 +531,7 @@ select.soflow {
 .modal-open {
 	padding-right: 0 !important; }
 
-.modal-content{
+.contact-modal {
 	font-size: 18px;
 	padding: 20px;
 }
@@ -617,7 +617,17 @@ margin-bottom: 40px;
         .jssora02r.jssora02rdn { background-position: -63px -33px; }
 
 
+
+
 /* amenities page */
+
+.amenities-modal{
+	padding: 25px;
+}
+
+.amenities-modal p{
+	font-size: 18px;
+}
 
 .amenities {
 	border: 1px solid #eebc24;

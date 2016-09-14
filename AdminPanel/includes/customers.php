@@ -1,3 +1,4 @@
+
 <table id="customer_table" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -41,7 +42,7 @@
 			$output .=  '<td>'.$row["contact"].'</td>';
 			$output .=  '<td>'.$row["email"].'</td>' ;
 				
-			$output .=  '<td><i class="fa fa-pencil-square-o edit-cus" data-id='.$row["cus_id"].' aria-hidden="true"></i></td>';	
+			$output .=  '<td><i class="fa fa-pencil-square-o edit-cus" data-customer='.$row["cus_id"].' aria-hidden="true"></i></td>';	
 			
 			$output .=  '</tr>';	
 			
@@ -55,3 +56,5 @@
 			            
 	</tbody>
 </table>
+
+

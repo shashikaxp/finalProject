@@ -22,7 +22,7 @@ while($rows = mysql_fetch_array($query))
 	$output .=   '<div class="col-md-8 pull-right rm-padding"  style="padding-bottom: 50px;">' ;
 	$output .=	'<div class="room_details">' ;
 	$output .=	'<div class="room-img col-md-4">'	;
-	$output .=	'<img  src="'. $row["image"] .'"></div> ' ;
+	$output .=	'<img  src="data:image;base64,'.$row["image"].'" ></div> ' ;
 				
 			
 	$output .=	'<div class="col-md-8">' ;

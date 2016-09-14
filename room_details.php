@@ -23,7 +23,7 @@
 
 	while($row = mysql_fetch_array($result)){
 		
-	$output =	'<img class="center img-responsive" src="'. $row["image"] .'" style="width:100%">';
+	$output =	'<img class="center img-responsive" src="data:image;base64,'.$row["image"].'" style="width:100%">';
 
 	$output .=	'<h3>'. $row["type"] .' - '. $row["bed"] .'<span class="pull-right">Start From $ '. $row["rate"] .' / Night</span></h3>';
 

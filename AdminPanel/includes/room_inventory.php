@@ -38,7 +38,7 @@
 			$output .=  '<td>'.$row["max_child"].'</td>';
 			$output .=  '<td>'.$row["reservation_id"].'</td>';
 				
-			$output .=  '<td><i class="fa fa-pencil-square-o"  data-id='.$row["roominventory_id"].' aria-hidden="true"></i></td>';
+			$output .=  '<td><i class="fa fa-pencil-square-o edit-roomin"  data-roomin='.$row["roominventory_id"].' aria-hidden="true"></i></td>';
 				
 			//$output .=  '<td><i class="fa fa-trash" aria-hidden="true"></i></td>';
 			$output .=  '</tr>';	
@@ -48,12 +48,9 @@
 			}
 			
 			
-			
-			
 			?>
 			
-		
-			
-            
 	</tbody>
 </table>
+
+

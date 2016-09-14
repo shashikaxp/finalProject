@@ -19,13 +19,25 @@
 		$result =	mysql_query($sql);
 			
 		if($result){
+			
+			if( $status == 'Cancelled'){
+				
+				    $sql2 = "UPDATE roominventory AS r SET r.arrival='$arrival', r.departure='$departure' , r.status='$status'
+				   WHERE r.reservation_id='$id'; " ;		
+			
+			      mysql_query($sql2);
 		
-		$sql2 = "UPDATE roominventory AS r SET r.arrival='$arrival', r.departure='$departure' 
+			}else{
+				
+				
+				$sql2 = "UPDATE roominventory AS r SET r.arrival='$arrival', r.departure='$departure' 
 				WHERE r.reservation_id='$id'; " ;		
 			
 			
-			mysql_query($sql2);
+			      mysql_query($sql2);
 		
+				
+			}
 		
 		}
 		

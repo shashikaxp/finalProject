@@ -2,8 +2,10 @@
 
 <?php 
 
-	$sql= "INSERT INTO comment (name, email, subject, content )
-		VALUES ('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["subject"]."' ,'".$_POST["message"]."')";
+	$status = "Pending";
+	
+	$sql = "INSERT INTO comment (name, email, subject, content , status  )
+		VALUES ('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["subject"]."' ,'".$_POST["message"]."' , 'Pending' )";
 
 	$result = mysql_query($sql);
 

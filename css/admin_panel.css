@@ -13,3 +13,45 @@
 	color: darkred;
 	cursor: pointer;
 }
+
+/* modals */
+
+.reservation-modal {
+	
+	padding: 20px;
+}
+
+.reservation-modal > .close{	
+	color: red;
+}
+
+#res-status{
+	padding: 4px;
+}
+
+.update-btn {
+	 border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: #333;
+	
+}
+
+.close-btn{
+	border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ec5353;
+}
+
+.add-btn{
+	border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: #55ab46;
+    margin: 0px 0px 27px 0px;
+	
+}

@@ -18,8 +18,10 @@
     <link href="css/custom.css" rel="stylesheet">
 	<link href="css/admin_panel.css" rel="stylesheet">
     <link href="css/bootstrap.vertical-tabs.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
 	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="resources/UberGallery.css" />
+    <link rel="stylesheet" href="resources/colorbox/1/colorbox.css" />
  
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Amatic+SC:400,600|Open+Sans:400,500,600,700|Montserrat:400,700|Raleway:400,600|Alegreya+Sans:400,700' rel='stylesheet' type='text/css'>
