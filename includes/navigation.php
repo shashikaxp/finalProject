@@ -6,11 +6,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand title animated pulse" href="index.php">Saladura Travels</a>
+        <a class="navbar-brand title animated bounceInLeft" href="index.php">Saladura Travels</a>
     </div>
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-nav-custom navbar-right">
+        <ul class="nav navbar-nav navbar-nav-custom navbar-right animated bounceInRight">
             <li><a href="index.php">Home</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li><a href="Amenities.php">Amenities</a></li>

@@ -81,7 +81,7 @@
 <?php  include "includes/models.php" ?>
 
 <div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.76743075460155!2d80.04629933511156!3d6.245347653413323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fb1c2f253646236!2sJuce+Hotel+Ambalangoda!5e0!3m2!1sen!2slk!4v1473069377028" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11203.201050197342!2d79.86360309295492!3d6.899009429204485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2597e13f2b949%3A0x6834f073a0a86f1b!2sSaladura+Villa!5e0!3m2!1sen!2slk!4v1473912057603" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 <?php include "includes/footer.php" ?>

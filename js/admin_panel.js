@@ -1,17 +1,39 @@
   
 $(window).load(function()  {
 	
-
- 
-     $('#customer_table').DataTable();	
+	
+    $('#customer_table').DataTable();	
 	$('#inventory_table').DataTable();
     $('#reservation_table').DataTable();
 	$('#comment_table').DataTable();
 	$('#room_table').DataTable();
 	$('#gallery_table').DataTable();
 	
+/* login  */
 	
-	
+	$("#login_btn").on('click',function(){
+		
+				$.ajax({  
+                     url:"AdminPanel/functions/login.php",  
+                     method:"post", 					
+					 data: $("#login_form").serialize(),  
+					  success:function(data)
+                     {  					 
+					
+                          
+						 if(data == 1 ){	
+							 window.location = "http://localhost/final/admin_panel.php" ; 
+						 }else if( data == 0) {		
+							
+						
+							$("#login_error").empty() ; 
+ 							$("#login_error").append("Incorrect Username or password ") ;
+						 }	
+					  }  
+			   
+                }); 
+		return false ;
+	});
 	
 /*	edit reservation  */
 	
@@ -443,6 +465,8 @@ $(window).load(function()  {
 		return false;
 		});
 	
+
+
 	
 	
 /*	image tool tip  */
@@ -495,7 +519,7 @@ $(window).load(function()  {
     });
 	
 	
-		  function readURL(input) {
+		  function readURL2(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             
@@ -508,8 +532,12 @@ $(window).load(function()  {
     }
     
     $("#file").change(function(){
-        readURL(this);
+        readURL2(this);
     });
+	
+
+ 
+	
 	
 		
 });

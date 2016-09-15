@@ -25,7 +25,7 @@
  
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Amatic+SC:400,600|Open+Sans:400,500,600,700|Montserrat:400,700|Raleway:400,600|Alegreya+Sans:400,700' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

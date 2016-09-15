@@ -7,7 +7,7 @@ $(window).load(function() {
 var date = new Date();
 date.setDate(date.getDate());
 
-$('.form-control').datetimepicker({
+$('.form_date').datetimepicker({
         language:  'en',
         weekStart: 1,
         todayBtn:  1,
@@ -22,21 +22,21 @@ $('.form-control').datetimepicker({
 	
     });
 	
-	$('.form-control2').datetimepicker({
-        language:  'en',
-        weekStart: 1,
-        todayBtn:  1,
-		autoclose: 1,
-		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
-		forceParse: 0,
-	    startDate: date,
-        pickerPosition : "top-left",
-		format: "dd MM yyyy" 
-	
-    });
-	
+//	$('.form_date').datetimepicker({
+//        language:  'en',
+//        weekStart: 1,
+//        todayBtn:  1,
+//		autoclose: 1,
+//		todayHighlight: 1,
+//		startView: 2,
+//		minView: 2,
+//		forceParse: 0,
+//	    startDate: date,
+//        pickerPosition : "top-left",
+//		format: "dd MM yyyy" 
+//	
+//    });
+//	
 
 
 	

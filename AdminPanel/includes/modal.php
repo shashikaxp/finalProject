@@ -9,7 +9,7 @@
 
 <!-- Comments modal-->
 
-<div class="modal fade " id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" data-easein="flipXIn" id="comment-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content reservation-modal">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span>

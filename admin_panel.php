@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+if( !isset($_SESSION['username']) &&  !isset($_SESSION['position'])  ){
+	
+	header('Location: http://localhost/final/admin_login.php');
+}
+
+ ?>
+
+
+
 <?php require "includes/header.php" ?>
 
 <?php include "includes/loading.php" ?>
@@ -10,13 +23,19 @@
  
 <div class="col-xs-12" style="margin-top : 80px;"> <!-- required for floating -->
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs admin-tabs">
       <li class="active"><a id="ap-res" href="#reservation" data-toggle="tab">Reservation</a></li>
       <li><a id="ap-roominventory" href="#roomsinventory" data-toggle="tab">Room Inventory</a></li>
       <li><a id="ap-cus"  href="#customer" data-toggle="tab">Customers</a></li>
-      <li><a id="ap-room" href="#rooms" data-toggle="tab">Rooms</a></li>
-	  <li><a id="ap-com" href="#comment" data-toggle="tab">Comments</a></li>
+      <li><a id="ap-room" href="#rooms" data-toggle="tab">Rooms</a></li>	 
 	  <li><a id="ap-com" href="#gallery" data-toggle="tab">Gallery</a></li>
+	<?php 
+	if( ($_SESSION['position']) == 'admin' ){
+	echo '<li><a id="ap-com" href="#comment" data-toggle="tab">Comments</a></li>';
+	}		
+	?>	
+		
+	  
 		
     </ul>
 </div>

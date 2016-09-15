@@ -8,10 +8,18 @@
             <span class="icon-bar"></span>
         </button>
 -->
-        <a class="navbar-brand title animated pulse" href="index.php">Saladura Travels - Admin Panel</a>
+        <a class="navbar-brand title_ap animated pulse" href="">Saladura Travels - Admin Panel</a>
     </div>
 
-	<div class="pull-right navbar-header " style="margin-right:5%;"><span class="title navbar-brand animated pulse">User : Shashika</span></div>
+	<div class="pull-right navbar-header " style="margin-right:5%;"><span class="title_ap navbar-brand animated pulse">User : <?php echo $_SESSION["username"]  ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<div class="pull-right"><form action = "AdminPanel/functions/logout.php">			
+			<button type="submit" class="logout animated pulse">Logout</button>
+ 			  </form>
+		</div>
+			
+			
+			
+			</div>
 <!--
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-nav-custom navbar-right">
