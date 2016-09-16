@@ -120,3 +120,8 @@
 .title:hover ,  .title_ap:hover {
 	color: #eebc24;
 } 
+
+
+#reports_table_wrapper{
+	padding-top: 40px;
+}

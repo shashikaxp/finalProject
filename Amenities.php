@@ -25,7 +25,7 @@
 	$output	 =	'<div class="amenities  container">';
 	$output	.=	'<h4 >'.$row["name"].'</h4>';
 	$output .=   '<input class="amenities_id" value="'.$row["amenities_id"].'" type="hidden">';
-	$output	.=	'<div calss="container"><img src="images/'.$row["pic"].'" alt="" class="center am-img img img-responsive"></div></div>';
+	$output	.=	'<div calss="container"><img src="data:image;base64,'.$row["pic"].'" alt="" class="center am-img img img-responsive"></div></div>';
 	
 		
 	echo $output;	

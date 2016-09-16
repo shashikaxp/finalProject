@@ -8,10 +8,16 @@ $(window).load(function()  {
 	$('#comment_table').DataTable();
 	$('#room_table').DataTable();
 	$('#gallery_table').DataTable();
+	$('#reports_table_daily').DataTable();
+	$('#amenities_table').DataTable();
+	
+
 	
 /* login  */
 	
 	$("#login_btn").on('click',function(){
+		
+		
 		
 				$.ajax({  
                      url:"AdminPanel/functions/login.php",  
@@ -409,7 +415,7 @@ $(window).load(function()  {
 		
 		});
 	
-		//	delete pic
+		//	delete pic gallery
 	
 	$(".delete-pic").on('click',function(){
 		
@@ -432,7 +438,7 @@ $(window).load(function()  {
 		
 		});
 	
-		  /*	add new pic  */
+		  /*	add new pic gallery  */
 	
 	$("#add-pic").on('click',function(){
 			$("#pic_count").val("1");
@@ -465,6 +471,134 @@ $(window).load(function()  {
 		return false;
 		});
 	
+	
+	
+	
+			/*	Amenities edit  */
+	
+		$("#amenities_table").on('click','tr .edit-amenities' ,function(){
+			
+		var id = $(this).data("amenities");
+			
+		
+		
+		$.ajax({  
+                     url:"AdminPanel/functions/amenities_ajax.php",  
+                     method:"post", 					
+					 data: ({id:id}),  
+					  success:function(data)
+                     {  
+                     
+						
+						var info = JSON.parse(data);
+						
+						 var src = 'data:image;base64,'+info[2] ;
+					
+						 $("#am-id").val(info[0]);
+						 $("#amenities-id").val(info[0]);
+						 $("#amenities-name").val(info[1]);					 
+						 $("#amenities-img").attr("src" , src);
+						 $("#amenities-des").val(info[3]);
+				
+						 	$("#amenities-modal").modal("show") ;
+					
+						 
+                     }  
+			 
+                }); 			
+		
+	});
+	
+	
+	
+	/*	update amenities  */
+	
+	$("#update-amenities").on('click',function(){
+        $("#amenities-modal").modal("hide") ;			
+		 var formData = new FormData($("#edit-amenities")[0]);
+			
+			
+	    
+		$.ajax({  
+                     url:"AdminPanel/functions/amenities_ajax_update.php",  
+                     method:"post", 					
+					 data: formData,  
+					  success:function(data)
+                     { 						
+					   location.reload();
+					 },
+					cache: false,
+					contentType: false,
+					processData: false
+
+                }); 
+			
+		return false;
+	});
+	
+	
+		/*	Add amenities  */
+	
+	$("#add-amenities").on('click',function(){
+     	
+		$("#amenities-add").val("1");
+		$("#amenities-image").attr("src" , "");			
+		$("#amenities-modal").modal("show");
+		$("#edit-amenities").trigger("reset");
+		
+		
+	});
+	
+		//	delete amenities
+	
+	$("#amenities_table").on('click', 'tr .delete-amenities' ,function(){
+		
+		
+		var id = $(this).data("amenitiesdel");
+		
+		$.ajax({  
+                     url:"AdminPanel/functions/amenities_ajax_delete.php",  
+                     method:"post", 					
+					 data: ({id:id}),  
+					  success:function(data)
+                     {  
+					 
+                      location.reload();
+						 
+                     }  
+			 
+                }); 			
+		
+		});
+	
+	
+//	Report ajax 
+
+		$(".reports-date").on('change',function(){
+			
+		$("#report-monthly").submit();  
+		$("#report-monthly1").submit();  
+			
+		
+//		$.ajax({  
+//                     url:"AdminPanel/functions/reports.php",  
+//                     method:"post", 					
+//					 data: $("#report-monthly").serialize(),  
+//					  success:function(data)
+//                     {         
+//						 
+//						
+//						alert(data);	
+//					datatable.clear().draw();
+//					
+//						
+//						 
+//													
+//						 
+//					 }
+//                }); 			
+//		
+	});		
 
 
 	
@@ -481,6 +615,8 @@ $(window).load(function()  {
 	
 	
 /*	tab  */
+	
+
 	
 	var url = document.location.toString();
 		if (url.match('#')) {
@@ -535,6 +671,31 @@ $(window).load(function()  {
         readURL2(this);
     });
 	
+	
+		  function readURL3(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#amenities-img').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+	
+	
+    $("#amenities-image").change(function(){
+        readURL3(this);
+    });
+	
+
+	
+////	saddsadasd
+//	
+	
+	var datatable = $('#reports_table').DataTable();						
 
  
 	

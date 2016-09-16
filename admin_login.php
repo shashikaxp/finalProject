@@ -12,8 +12,8 @@ if( isset($_SESSION['username']) &&  isset($_SESSION['position'])  ){
 <div class="layer admin_body">
 	<div class="layer panel">
 		<div class=" col-md-4">
+			
 		<form id="login_form" class="form-horizontal col-md-12" method="POST">
-
    
 				<!-- Text input-->
 			    <div class=" center">				  

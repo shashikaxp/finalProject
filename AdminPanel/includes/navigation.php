@@ -8,12 +8,12 @@
             <span class="icon-bar"></span>
         </button>
 -->
-        <a class="navbar-brand title_ap animated pulse" href="">Saladura Travels - Admin Panel</a>
+        <a class="navbar-brand title_ap animated bounceInLeft" href="">Saladura Travels - Admin Panel</a>
     </div>
 
-	<div class="pull-right navbar-header " style="margin-right:5%;"><span class="title_ap navbar-brand animated pulse">User : <?php echo $_SESSION["username"]  ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	<div class="pull-right navbar-header " style="margin-right:5%;"><span class="title_ap navbar-brand animated bounceInRight">User : <?php echo $_SESSION["username"]  ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<div class="pull-right"><form action = "AdminPanel/functions/logout.php">			
-			<button type="submit" class="logout animated pulse">Logout</button>
+			<button type="submit" class="logout animated bounceInRight">Logout</button>
  			  </form>
 		</div>
 			

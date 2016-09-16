@@ -29,9 +29,11 @@ if( !isset($_SESSION['username']) &&  !isset($_SESSION['position'])  ){
       <li><a id="ap-cus"  href="#customer" data-toggle="tab">Customers</a></li>
       <li><a id="ap-room" href="#rooms" data-toggle="tab">Rooms</a></li>	 
 	  <li><a id="ap-com" href="#gallery" data-toggle="tab">Gallery</a></li>
+	  <li><a id="ap-com" href="#amenities" data-toggle="tab">Amenities</a></li>
 	<?php 
 	if( ($_SESSION['position']) == 'admin' ){
-	echo '<li><a id="ap-com" href="#comment" data-toggle="tab">Comments</a></li>';
+	echo '<li><a id="ap-com" href="#comment" data-toggle="tab">Comments</a></li>' ;
+ 	echo  '<li><a id="ap-report" href="#reports" data-toggle="tab">Reports</a></li>';
 	}		
 	?>	
 		
@@ -49,6 +51,8 @@ if( !isset($_SESSION['username']) &&  !isset($_SESSION['position'])  ){
       <div class="tab-pane" id="rooms"><?php include "AdminPanel/includes/rooms.php" ?></div>
 	  <div class="tab-pane" id="comment"><?php include "AdminPanel/includes/comment.php" ?></div>
 	  <div class="tab-pane" id="gallery"><?php include "AdminPanel/includes/gallery.php" ?></div>
+	  <div class="tab-pane" id="reports"><?php include "AdminPanel/includes/reports.php" ?></div>
+	  <div class="tab-pane" id="amenities"><?php include "AdminPanel/includes/amenities.php" ?></div>
     </div>
 </div>  
 
