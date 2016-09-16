@@ -10,8 +10,12 @@ $(window).load(function()  {
 	$('#gallery_table').DataTable();
 	$('#reports_table_daily').DataTable();
 	$('#amenities_table').DataTable();
-	
+	$('#admin_table').DataTable();
 
+	
+/* booking -img */	
+$(".booking-img").find('h1').addClass("animated flipInX");	
+	
 	
 /* login  */
 	
@@ -43,7 +47,7 @@ $(window).load(function()  {
 	
 /*	edit reservation  */
 	
-	$(".edit-reservation").on('click',function(){
+	$("#reservation_table").on('click','tr .edit-reservation',function(){
 		
 		var id = $(this).data("reservation");
 		
@@ -111,7 +115,7 @@ $(window).load(function()  {
 	
 /*	edit room_inventory  */
 	
-		$(".edit-roomin").on('click',function(){
+		$("#inventory_table").on('click','tr .edit-roomin',function(){
 		
 		var id = $(this).data("roomin");
 		
@@ -181,7 +185,7 @@ $(window).load(function()  {
 	
   /*	edit customer  */
 	
-	$(".edit-cus").on('click',function(){
+	$("#customer_table").on('click','tr .edit-cus',function(){
 		
 		var id = $(this).data("customer");
 		
@@ -244,7 +248,7 @@ $(window).load(function()  {
 	
 	  /*	edit comment  */
 	
-	$(".edit-comment").on('click',function(){
+	$("#comment_table").on('click','tr .edit-comment',function(){
 		
 		var id = $(this).data("comment");
 			
@@ -265,13 +269,13 @@ $(window).load(function()  {
 						 $("#comment-content").val(info[4]);
 						 
 						  if(info[5] == 'Pending'){
-							 $("#room-status").val("Pending");
+							 $("#comment-status").val("Pending");
 						 }
 						 else if(info[5] == 'On Process'){
-							 $("#room-status").val("On Process");
+							 $("#comment-status").val("On Process");
 						 }
 						  else if(info[5] == 'Done'){
-							 $("#room-status").val("Done");
+							 $("#comment-status").val("Done");
 						 }
 						
 						
@@ -310,7 +314,7 @@ $(window).load(function()  {
 	
 		/*	room edit  */
 	
-		$(".edit-room").on('click',function(){
+		$("#room_table").on('click','tr .edit-room',function(){
 			
 		var id = $(this).data("room");
 		$("#room-add").val("0");	
@@ -395,7 +399,7 @@ $(window).load(function()  {
 	
 	//	delete room
 	
-	$(".delete-room").on('click',function(){
+	$("#room_table").on('click','tr .delete-room',function(){
 		
 		
 		var id = $(this).data("delroom");
@@ -417,7 +421,7 @@ $(window).load(function()  {
 	
 		//	delete pic gallery
 	
-	$(".delete-pic").on('click',function(){
+	$("#gallery_table").on('click','tr .delete-pic',function(){
 		
 		var pic = 0;
 		var name = $(this).data("pic");
@@ -571,6 +575,102 @@ $(window).load(function()  {
 		
 		});
 	
+	
+//	edit admin
+	
+		
+		$("#admin_table").on('click','tr .edit-admin' ,function(){
+			
+		var id = $(this).data("admin");
+			
+		
+		
+		$.ajax({  
+                     url:"AdminPanel/functions/admin_ajax.php",  
+                     method:"post", 					
+					 data: ({id:id}),  
+					  success:function(data)
+                     {  
+                     
+						
+						var info = JSON.parse(data);
+						
+						
+					 	$("#adminid").val(info[0]);
+						 $("#admin-id").val(info[0]);
+						 $("#admin-username").val(info[1]);
+						 $("#admin-password").val(info[2]);							
+						
+						 if(info[3] == 'Admin'){
+							 $("#admin-position").val("Admin");
+						 }
+						 else if(info[3] == 'Frontdesk'){
+							 $("#admin-position").val("Frontdesk");
+						 }
+						 
+				
+						$("#admin-modal").modal("show") ;
+					
+						 
+                     }  
+			 
+                }); 			
+		
+	});
+	
+	/*	Add admin  */
+	
+	$("#add-admin").on('click',function(){
+     	
+		$("#admin-add").val("1");			
+		$("#admin-modal").modal("show");
+		$("#edit-admin").trigger("reset");
+		
+		
+	});
+	
+	
+		/*	update admin  */
+	
+	$("#update-admin").on('click',function(){
+        $("#admin-modal").modal("hide") ;			
+		 
+		$.ajax({  
+                     url:"AdminPanel/functions/admin_ajax_update.php",  
+                     method:"post", 					
+					 data: $("#edit-admin").serialize(),  
+					  success:function(data)
+                     { 		
+						
+					   location.reload();
+					 }
+					
+                }); 
+			
+		
+	});
+	
+//	delete admin 
+	
+		$("#admin_table").on('click', 'tr .delete-admin' ,function(){
+		
+		
+		var id = $(this).data("deladmin");
+		
+		$.ajax({  
+                     url:"AdminPanel/functions/admin_ajax_delete.php",  
+                     method:"post", 					
+					 data: ({id:id}),  
+					  success:function(data)
+                     {  
+					 
+                      location.reload();
+						 
+                     }  
+			 
+                }); 			
+		
+		});
 	
 //	Report ajax 
 

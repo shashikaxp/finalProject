@@ -17,7 +17,7 @@
 	
 	$output	 .=	'<div class="center">';
 	$output	.=	'<h4 style="margin: 20px auto font-size:22px"><b><i>'.$row["name"].'</i></b></h4>';
-	$output	.=	'<div calss="container center"><img src="images/'.$row["pic"].'" alt="" class="center am-img img-responsive"></div></div>';	
+	$output	.=	'<div calss="container center"><img src="data:image;base64,'.$row["pic"].'" alt="" class="center am-img img-responsive"></div></div>';	
 	$output	.=   '<div><p>'.$row["des"].'</p></div>';	
 		
 		

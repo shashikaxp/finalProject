@@ -4,11 +4,11 @@
 
     <div class="col-sm-4 links center">
         <ul class="list list-inline">
-            <li><a href="">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>|</li>
-            <li><a href="">About</a></li>
+            <li><a href="about_us.php">About</a></li>
             <li>|</li>
-            <li><a href="">Contact</a></li>
+            <li><a href="contact_us.php">Contact</a></li>
             <li>|</li>
             <li><a href="">FAQ</a></li>
         </ul>
