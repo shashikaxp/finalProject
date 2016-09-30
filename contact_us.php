@@ -55,12 +55,12 @@
 	
 	<div class="col-md-4 before-contact">
 		<h3>Before contact us</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Non equidem invideo, miror magis posuere velit aliquet.</p>
+		<p>Feel free to send us any comment or complain.. We whould like to help you any time  </p>
 	
 		<h3>Contact information</h3>
 		
 		<ul class="list list-unstyled contact-info">
-			<li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;184 Main Collins Street West Victoria 8007</li>
+			<li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;Saladura Travels Galle Road, Hikkaduwa </li>
 			<li><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;&nbsp; 077 566 6586</li>
 			<li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;011 2 546 546</li>
 			<li><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;contact@sladuratravels.com</li>

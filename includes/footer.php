@@ -26,7 +26,7 @@
     </div>
 
     <div class="col-sm-4 copyrights">
-    Copyright 2015 All Right Reserved
+    Copyright 2016 All Right Reserved
     </div>
 
 </footer>

@@ -16,56 +16,25 @@
 	<h3>History</h3>
 	
 	<p>
-	There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combine
+	
+			Saladura Travels, started in the early seventies by Siri E Goonewardene, the current Managing Director as just a caravan park charging 10 rupees a night per caravan, and now boasts of 35 sea-facing rooms, stretching across a vast space of beach. We have evolved over the years, but we still pride ourselves on personalized service. With all senior staff members boasting over 15 years of service at Saladura Travels, our aim is to ensure that you have a memorable experience at our hotel. Our repeat clients who have visited the hotel over 10 times, is a testament to this service that we have provided over the years.
 		
 	</p>
 	
-    <div id="jssor_1" class="center" style="position: relative; margin: 25px auto; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; visibility: hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;background:url('images/about_us/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-        </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/002.jpg" />               
-            </div>
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/007.jpg" />  
-			</div>		
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/003.jpg" />               
-            </div>
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/004.jpg" />
-            </div>
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/005.jpg" />           
-            </div>
-            <div data-p="112.50" style="display: none;">
-                <img data-u="image" src="images/about_us/006.jpg" />           
-            </div>
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
-            <div data-u="prototype" style="width:12px;height:12px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    <div  class="center" style="padding:20px; ">
+		
+		
+		<img class="img img-responsive center" src="images/staff.jpg">
+		
+		
+
     </div>
 	
 	
 	<h3>Our Staff</h3>
 	
 <p class="our-staff">
-The story of the Galadari Hotel, Colombo which opened its doors in 1984, is a splendid tale of continual improvement of product and highest standard of quality in hospitality over the past 25 years.<br><br>
-
-Our vision & beliefs are firmly grounded in extending a true personalized service to all our guests, laced with an unforgettable luxury hotel experience with the finest traditions of international hotel-keeping.<br><br>
-
-The Galadari Hotel, Colombo, meticulous about maintaining the privacy of its guests has drawn in many an elite personality from around the world such as heads of government, prime ministers of leading nations, royalty, well known sports & music personalities over the past two and half decades.<br><br>
-
-Situated in the heart of the city center with many a historical building within walking distance and a panoramic view of the magnificent Indian ocean, the Galadari Hotel offers a rich blend of service and quality in five star luxury living. 
+Thanks to our experienced and friendly staff your stay will be a wondeful holiday experience. Around 20 staff enjoy making everyday of your holiday a memorable one. In a pleasant way and with natural personality.<br><br> Each member of our staff enriches our hotel with their valuable knowledge and genuine enthusiasm. Respect and mutual appreciation form the basis of contact between us, our staff and you, our guests. A philosphy which characterises a special feel-good atmoshpere at the Saladura Travels. 
 
 
 </p>
