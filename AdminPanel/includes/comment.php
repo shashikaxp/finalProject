@@ -45,6 +45,75 @@
 </table>
 
 
+ 		<div class="col-md-10 ">
+			
+			<h3>Summery</h3>
+			
+			
+			
+		  <?php		  
+		  
+			
+			
+			
+			$sql = mysql_query("SELECT COUNT(comment_id) FROM comment ");
+			$sql1 = mysql_query("SELECT COUNT(comment_id) FROM comment WHERE status = 'On Process' ");
+			$sql2 = mysql_query("SELECT COUNT(comment_id) FROM comment WHERE status = 'Done'  ");
+			$sql3 = mysql_query("SELECT COUNT(comment_id) FROM comment WHERE status = 'Pending'  ");
+			
+			
+			while( $row = mysql_fetch_array($sql) ){
+				$total = $row["COUNT(comment_id)"];				
+			}
+
+				while( $row = mysql_fetch_array($sql1) ){
+				$onprocess = $row["COUNT(comment_id)"];				
+			}
+			
+				while( $row = mysql_fetch_array($sql2) ){
+				$done = $row["COUNT(comment_id)"];				
+			}
+			
+				while( $row = mysql_fetch_array($sql3) ){
+				$pending = $row["COUNT(comment_id)"];				
+			}
+			 
+		 
+			
+		  
+						$output = 	'<div class="details col-md-6">';
+						$output .= 	'<ul class="list list-inline text-left">';
+						$output .=  	'<li>';
+						$output .= 	 		'<ul class="list list-unstyled">';			
+						$output .=			'<li><label>Total</label></li>';
+						$output .=			'<li><label>Pending complains</label></li>';
+						$output .= 			'<li><label>On Process complains</label></li>'	;
+						$output .= 			'<li><label>Completed complains</label></li>';
+						$output .= 	'</ul>';
+									  
+						$output .=	'</li>';
+						$output .= 	 '<li>';
+						$output .= 			  '<ul class="list list-unstyled">';
+						$output .=				'<li><label>: &nbsp;&nbsp;&nbsp;'.$total.'</label></li>';
+						$output .= 				'<li><label>: &nbsp;&nbsp;&nbsp;'.$pending.'</label></li>';
+						$output .= 				'<li><label>: &nbsp;&nbsp;&nbsp;'.$onprocess.'</label></li>';
+						$output .= 				'<li><label>: &nbsp;&nbsp;&nbsp;'.$done.'</label></li>';
+						$output .= 		 	  '</ul>';
+						$output .=	 '</li>';	  
+						$output .= 	 '</ul>';	
+						$output .= 	'</div>';
+											  
+						echo $output;
+				
+			
+			  ?>
+		  
+		  </div>
+		
+
+    
+
+
 
 
 
